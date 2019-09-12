@@ -1,0 +1,90 @@
+﻿@model TSSReport.Models.LoginModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TSS Report</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="~/scripts/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <!-- Page level plugin CSS-->
+    <!-- Custom styles for this template-->
+    <link href="~/scripts/css/sb-admin.css" rel="stylesheet" />
+
+</head>
+
+<body class="bg-dark">
+    @using (Html.BeginForm("Login", "Login", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @id = "formControl", @class = "form-horizontal" }))
+    {
+        <div class="container">
+            <div class="card card-login mx-auto mt-5">
+                <div class="card-header">Login</div>
+                <div class="card-body">
+                    <form>
+                        <div class="alert alert-danger alert-dismissible" id="divErrMsg" style="display:none;">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button> <strong>Error!</strong> <span id="ErrorMessage"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", @placeholder = "Enter Username", @autocomplete = "off", @maxlength = 30, @onpaste = "return false;", @id = "UserName" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.Password, new { @class = "form-control", @placeholder = "Enter Password", @autocomplete = "off", @maxlength = 30, @type = "password", @onpaste = "return false;", @id = "Password" })
+                            </div>
+                        </div>
+
+                        <button type="submit" id="btnSubmit" class="btn btn-primary btn-block" title="Submit" value="Submit">Login</button>
+                    </form>
+                    <div class="text-center">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Bootstrap core JavaScript-->
+        <script src="~/scripts/vendor/jquery/jquery.min.js"></script>
+        <script src="~/scripts/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="~/scripts/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="~/scripts/js/sb-admin.js"></script>
+    }
+</body>
+
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#divErrMsg").hide();
+        $("#btnSubmit").click(function () {
+            var username = $("#UserName").val();
+            var password = $("#Password").val();
+            if ((username == "" || username == null || username == undefined) || (password == "" || password == null || password == undefined)) {
+                $("#ErrorMessage").text("Please enter Username & Password");
+                $("#divErrMsg").show();
+                return false;
+            } else {
+                $("#divErrMsg").hide();
+            }
+        })
+    });
+</script>

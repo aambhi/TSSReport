@@ -1,0 +1,156 @@
+==================================================================
+DateTime10-09-2019 13:49:20
+ Controller: Report
+ URL: http://localhost:60313/Report/PartyMasterReport
+ Action: PartyMasterReport
+ Error Message: Unable to cast object of type 'TSSReport.Models.LoginResultModel' to type 'TSSReport.Models.LoginModel'.
+ Inner Exception: Unable to cast object of type 'TSSReport.Models.LoginResultModel' to type 'TSSReport.Models.LoginModel'.
+ User: 
+ UserIP: 192.168.1.100
+==================================================================
+==================================================================
+DateTime10-09-2019 14:25:38
+ Controller: Report
+ URL: http://localhost:60313/Report/PartyMasterReport
+ Action: PartyMasterReport
+ Error Message: Unable to cast object of type 'TSSReport.Models.LoginResultModel' to type 'TSSReport.Models.LoginModel'.
+ Inner Exception: Unable to cast object of type 'TSSReport.Models.LoginResultModel' to type 'TSSReport.Models.LoginModel'.
+ User: 
+ UserIP: 192.168.1.100
+==================================================================
+==================================================================
+DateTime10-09-2019 14:26:13
+ Controller: Report
+ URL: http://localhost:60313/Report/PartyMasterReport
+ Action: PartyMasterReport
+ Error Message: Unable to cast object of type 'TSSReport.Models.LoginResultModel' to type 'TSSReport.Models.LoginModel'.
+ Inner Exception: Unable to cast object of type 'TSSReport.Models.LoginResultModel' to type 'TSSReport.Models.LoginModel'.
+ User: 
+ UserIP: 192.168.1.100
+==================================================================
+==================================================================
+DateTime10-09-2019 14:32:10
+ Controller: Report
+ URL: http://localhost:60313/Report/DeliveryChallanReport
+ Action: DeliveryChallanReport
+ Error Message: Unable to cast object of type 'TSSReport.Models.LoginResultModel' to type 'TSSReport.Models.LoginModel'.
+ Inner Exception: Unable to cast object of type 'TSSReport.Models.LoginResultModel' to type 'TSSReport.Models.LoginModel'.
+ User: 
+ UserIP: 192.168.1.100
+==================================================================
+==================================================================
+DateTime10-09-2019 14:35:39
+ Controller: Report
+ URL: http://localhost:60313/Report/DeliveryChallanReport
+ Action: DeliveryChallanReport
+ Error Message: Unable to cast object of type 'TSSReport.Models.LoginResultModel' to type 'TSSReport.Models.LoginModel'.
+ Inner Exception: Unable to cast object of type 'TSSReport.Models.LoginResultModel' to type 'TSSReport.Models.LoginModel'.
+ User: 
+ UserIP: 192.168.1.100
+==================================================================
+==================================================================
+DateTime10-09-2019 14:36:11
+ Controller: Report
+ URL: http://localhost:60313/Report/DeliveryChallanReport
+ Action: DeliveryChallanReport
+ Error Message: Object reference not set to an instance of an object.
+ Inner Exception: Object reference not set to an instance of an object.
+ User: admin
+ UserIP: 192.168.1.100
+==================================================================
+==================================================================
+DateTime10-09-2019 14:52:44
+ Controller: Report
+ URL: http://localhost:60313/Report/DeliveryChallanReport
+ Action: DeliveryChallanReport
+ Error Message: Object reference not set to an instance of an object.
+ Inner Exception: Object reference not set to an instance of an object.
+ User: Delhi1
+ UserIP: 192.168.1.100
+==================================================================
+==================================================================
+DateTime10-09-2019 15:04:22
+ Controller: Report
+ URL: GetSalesInvoiceReport
+ Action: GetSalesInvoiceReport
+ Error Message: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ Inner Exception:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryCloseInternal(Boolean closeReader)
+   at System.Data.SqlClient.SqlDataReader.Close()
+   at System.Data.Common.DbDataReader.Dispose(Boolean disposing)
+   at System.Data.Common.DbDataReader.Dispose()
+   at TSSReport.Data.MultipleResultSets.MultipleResultSetWrapper.Execute(Object[] parameters) in D:\TestProject\TSS\Project\TSSReport\TSSReport\Data\MultipleResultSets.cs:line 66
+   at TSSReport.Repository.ReportRepository.GetSalesInvoiceReport(String dbName, String FromDate, String ToDate, String LRNO) in D:\TestProject\TSS\Project\TSSReport\TSSReport\Repository\ReportRepository.cs:line 114
+ User: 
+ UserIP: 
+==================================================================
+==================================================================
+DateTime10-09-2019 15:05:17
+ Controller: Report
+ URL: GetSalesInvoiceReport
+ Action: GetSalesInvoiceReport
+ Error Message: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ Inner Exception:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryCloseInternal(Boolean closeReader)
+   at System.Data.SqlClient.SqlDataReader.Close()
+   at System.Data.Common.DbDataReader.Dispose(Boolean disposing)
+   at System.Data.Common.DbDataReader.Dispose()
+   at TSSReport.Data.MultipleResultSets.MultipleResultSetWrapper.Execute(Object[] parameters) in D:\TestProject\TSS\Project\TSSReport\TSSReport\Data\MultipleResultSets.cs:line 66
+   at TSSReport.Repository.ReportRepository.GetSalesInvoiceReport(String dbName, String FromDate, String ToDate, String LRNO) in D:\TestProject\TSS\Project\TSSReport\TSSReport\Repository\ReportRepository.cs:line 114
+ User: 
+ UserIP: 
+==================================================================
+==================================================================
+DateTime10-09-2019 15:06:57
+ Controller: Report
+ URL: GetSalesInvoiceReport
+ Action: GetSalesInvoiceReport
+ Error Message: The specified cast from a materialized 'System.DateTime' type to the 'System.String' type is not valid.
+ Inner Exception:    at System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   at lambda_method(Closure , Shaper )
+   at System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   at System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at TSSReport.Data.MultipleResultSets.MultipleResultSetWrapper.<>c__4`1.<With>b__4_0(IObjectContextAdapter adapter, DbDataReader reader) in D:\TestProject\TSS\Project\TSSReport\TSSReport\Data\MultipleResultSets.cs:line 37
+   at TSSReport.Data.MultipleResultSets.MultipleResultSetWrapper.Execute(Object[] parameters) in D:\TestProject\TSS\Project\TSSReport\TSSReport\Data\MultipleResultSets.cs:line 63
+   at TSSReport.Repository.ReportRepository.GetSalesInvoiceReport(String dbName, String FromDate, String ToDate, String LRNO) in D:\TestProject\TSS\Project\TSSReport\TSSReport\Repository\ReportRepository.cs:line 114
+ User: 
+ UserIP: 
+==================================================================
+==================================================================
+DateTime10-09-2019 18:07:08
+ Controller: Report
+ URL: http://localhost:60313/Report/DeliveryChallanReport
+ Action: DeliveryChallanReport
+ Error Message: Object reference not set to an instance of an object.
+ Inner Exception: Object reference not set to an instance of an object.
+ User: Delhi1
+ UserIP: 192.168.43.128
+==================================================================
+==================================================================
+DateTime10-09-2019 18:07:15
+ Controller: Report
+ URL: http://localhost:60313/Report/DeliveryChallanReport
+ Action: DeliveryChallanReport
+ Error Message: Object reference not set to an instance of an object.
+ Inner Exception: Object reference not set to an instance of an object.
+ User: Delhi1
+ UserIP: 192.168.43.128
+==================================================================
+==================================================================
+DateTime10-09-2019 18:11:26
+ Controller: Report
+ URL: GetSalesInvoiceReport
+ Action: GetSalesInvoiceReport
+ Error Message: The specified cast from a materialized 'System.DateTime' type to the 'System.String' type is not valid.
+ Inner Exception: 
+ User: 
+ UserIP: 
+==================================================================

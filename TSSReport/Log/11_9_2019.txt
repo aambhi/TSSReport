@@ -1,0 +1,120 @@
+==================================================================
+DateTime11-09-2019 00:01:23
+ Controller: Report
+ URL: GetSalesInvoiceReport
+ Action: GetSalesInvoiceReport
+ Error Message: The specified cast from a materialized 'System.DateTime' type to the 'System.String' type is not valid.
+ Inner Exception: 
+ User: 
+ UserIP: 
+==================================================================
+==================================================================
+DateTime11-09-2019 00:35:08
+ Controller: Report
+ URL: GetBookingFormReport
+ Action: GetBookingFormReport
+ Error Message: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+ Inner Exception: 
+ User: 
+ UserIP: 
+==================================================================
+==================================================================
+DateTime11-09-2019 00:35:31
+ Controller: Report
+ URL: GetBookingFormReport
+ Action: GetBookingFormReport
+ Error Message: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+ Inner Exception: 
+ User: 
+ UserIP: 
+==================================================================
+==================================================================
+DateTime11-09-2019 00:48:52
+ Controller: Report
+ URL: GetBookingFormReport
+ Action: GetBookingFormReport
+ Error Message: A transport-level error has occurred when receiving results from the server. (provider: Session Provider, error: 19 - Physical connection is not usable)
+ Inner Exception: 
+ User: 
+ UserIP: 
+==================================================================
+==================================================================
+DateTime11-09-2019 00:54:47
+ Controller: Report
+ URL: GetSalesInvoiceReport
+ Action: GetSalesInvoiceReport
+ Error Message: A transport-level error has occurred when receiving results from the server. (provider: Session Provider, error: 19 - Physical connection is not usable)
+ Inner Exception: 
+ User: 
+ UserIP: 
+==================================================================
+==================================================================
+DateTime11-09-2019 00:56:34
+ Controller: Report
+ URL: GetSalesInvoiceReport
+ Action: GetSalesInvoiceReport
+ Error Message: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ Inner Exception: 
+ User: 
+ UserIP: 
+==================================================================
+==================================================================
+DateTime11-09-2019 00:58:13
+ Controller: Report
+ URL: GetSalesInvoiceReport
+ Action: GetSalesInvoiceReport
+ Error Message: Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ Inner Exception: 
+ User: 
+ UserIP: 
+==================================================================
+==================================================================
+DateTime11-09-2019 19:30:39
+ Controller: Report
+ URL: GetBookingFormReport
+ Action: GetBookingFormReport
+ Error Message: Could not find stored procedure 'dbo.PROC_BookingFormReportWeb'.
+ Inner Exception: 
+ User: 
+ UserIP: 
+==================================================================
+==================================================================
+DateTime11-09-2019 19:30:43
+ Controller: Report
+ URL: GetPartyMasterReport
+ Action: GetPartyMasterReport
+ Error Message: Could not find stored procedure 'dbo.Sp_PartywiseClosingBalance'.
+ Inner Exception: 
+ User: 
+ UserIP: 
+==================================================================
+==================================================================
+DateTime11-09-2019 19:30:44
+ Controller: Report
+ URL: GetDeliveryChallanReport
+ Action: GetDeliveryChallanReport
+ Error Message: Could not find stored procedure 'dbo.PROC_DeliveryChallanDelhiWeb'.
+ Inner Exception: 
+ User: 
+ UserIP: 
+==================================================================
+==================================================================
+DateTime11-09-2019 19:30:45
+ Controller: Report
+ URL: GetSalesInvoiceReport
+ Action: GetSalesInvoiceReport
+ Error Message: Could not find stored procedure 'dbo.PROC_SalesINvoiceWeb'.
+ Inner Exception: 
+ User: 
+ UserIP: 
+==================================================================
+==================================================================
+DateTime11-09-2019 19:30:46
+ Controller: Report
+ URL: GetBookingFormReport
+ Action: GetBookingFormReport
+ Error Message: Could not find stored procedure 'dbo.PROC_BookingFormReportWeb'.
+ Inner Exception: 
+ User: 
+ UserIP: 
+==================================================================
