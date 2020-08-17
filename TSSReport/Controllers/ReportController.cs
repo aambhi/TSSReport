@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Web.Mvc;
 using TSSReport.App_Start;
@@ -12,7 +13,7 @@ namespace TSSReport.Controllers
     [Authenticate]
     public class ReportController : Controller
     {
-        public ActionResult Index(string DBName = null,string CompanyName = null)
+        public ActionResult Index(string DBName = null, string CompanyName = null)
         {
             if (!string.IsNullOrEmpty(DBName))
             {
@@ -32,61 +33,37 @@ namespace TSSReport.Controllers
 
         public ActionResult BookingFormReport()
         {
-            var fromDate = DateTime.Now.AddDays(-7).ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
-            var toDate = DateTime.Now.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
-            ViewBag.FromDate = fromDate;
-            ViewBag.ToDate = toDate;
-            string dbname = ((LoginResultModel)Session["UserDetails"]).DBName;
-            var result = ReportRepository.GetBookingFormReport(dbname, fromDate, toDate, "");
-            return View(result);
+            return View(new List<BookingReportModel>());
         }
         [HttpPost]
-        public ActionResult BookingFormReport(string FromDate, string ToDate, string LRNo)
+        public ActionResult BookingFormReport(string LRNo)
         {
-            ViewBag.FromDate = FromDate;
-            ViewBag.ToDate = ToDate;
             string dbname = ((LoginResultModel)Session["UserDetails"]).DBName;
-            var result = ReportRepository.GetBookingFormReport(dbname, FromDate, ToDate, LRNo);
+            var result = ReportRepository.GetBookingFormReport(dbname, LRNo);
             return View(result);
         }
 
         public ActionResult DeliveryChallanReport()
         {
-            var fromDate = DateTime.Now.AddDays(-7).ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
-            var toDate = DateTime.Now.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
-            ViewBag.FromDate = fromDate;
-            ViewBag.ToDate = toDate;
-            string dbname = ((LoginResultModel)Session["UserDetails"]).DBName;
-            var result = ReportRepository.GetDeliveryChallanReport(dbname, fromDate, toDate, "");
-            return View(result);
+            return View(new List<DeliveryChallanReportModel>());
         }
         [HttpPost]
-        public ActionResult DeliveryChallanReport(string FromDate, string ToDate, string LRNo)
+        public ActionResult DeliveryChallanReport(string LRNo)
         {
-            ViewBag.FromDate = FromDate;
-            ViewBag.ToDate = ToDate;
             string dbname = ((LoginResultModel)Session["UserDetails"]).DBName;
-            var result = ReportRepository.GetDeliveryChallanReport(dbname, FromDate, ToDate, LRNo);
+            var result = ReportRepository.GetDeliveryChallanReport(dbname, LRNo);
             return View(result);
         }
 
         public ActionResult SalesInvoiceReport()
         {
-            var fromDate = DateTime.Now.AddDays(-7).ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
-            var toDate = DateTime.Now.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
-            ViewBag.FromDate = fromDate;
-            ViewBag.ToDate = toDate;
-            string dbname = ((LoginResultModel)Session["UserDetails"]).DBName;
-            var result = ReportRepository.GetSalesInvoiceReport(dbname, fromDate, toDate, "");
-            return View(result);
+            return View(new List<SalesInvoiceReportModel>());
         }
         [HttpPost]
-        public ActionResult SalesInvoiceReport(string FromDate, string ToDate, string LRNo)
+        public ActionResult SalesInvoiceReport(string LRNo)
         {
-            ViewBag.FromDate = FromDate;
-            ViewBag.ToDate = ToDate;
             string dbname = ((LoginResultModel)Session["UserDetails"]).DBName;
-            var result = ReportRepository.GetSalesInvoiceReport(dbname, FromDate, ToDate, LRNo);
+            var result = ReportRepository.GetSalesInvoiceReport(dbname, LRNo);
             return View(result);
         }
     }

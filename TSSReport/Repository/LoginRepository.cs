@@ -56,6 +56,35 @@ namespace TSSReport.Repository
 
         }
 
+        public static TrackLRNoModel TrackLRStatus(string LRNo)
+        {
+            var trackLRNO = new TrackLRNoModel();
+            try
+            {
+                var _LRNo = new SqlParameter { ParameterName = "LRNo", Value = LRNo };
+
+                string connectionString = ConfigurationManager.ConnectionStrings["TrackDBEntities"].ToString();
+                using (var dbContext = new TranDBContext(connectionString))
+                {
+                    var results = dbContext
+                       .MultipleResults("[dbo].[Sp_WebBookingFormReport]")
+                       .With<TrackLRNoModel>()
+                       .Execute(_LRNo);
+                    if (results != null && results.Count > 0)
+                    {
+                        trackLRNO = ((List<TrackLRNoModel>)results[0]).SingleOrDefault();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Common.LogError("Login", "TrackLRStatus", "TrackLRStatus", ex.Message.ToString(), ex.StackTrace.ToString(), "", "");
+            }
+
+            return trackLRNO;
+
+        }
+
         private static string Encrypt(string Text)
         {
             string EncryptRet = default(string);

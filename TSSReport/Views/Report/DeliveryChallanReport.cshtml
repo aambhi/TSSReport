@@ -30,21 +30,6 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-sm-1">
-                        <label class="control-label"><b>From Date</b></label>
-                    </div>
-                    <div class="col-sm-2">
-                        @Html.TextBox("FromDate", "", new { @id = "FromDate", @class = "datepicker form-control", @autocomplete = "off", @placeholder = "From Date", @maxlength = "12" })
-                        @Html.ValidationMessage("FromDate", "", new { @id = "ErrFromDate", @style = "color:red;" })
-                    </div>
-
-                    <div class="col-sm-1">
-                        <label class="control-label"><b>To Date</b></label>
-                    </div>
-                    <div class="col-sm-2">
-                        @Html.TextBox("ToDate", "", new { @id = "ToDate", @class = "datepicker form-control", @autocomplete = "off", @placeholder = "To Date", @maxlength = "12" })
-                        @Html.ValidationMessage("", "", new { @id = "ErrToDate", @style = "color:red;" })
-                    </div>
-                    <div class="col-sm-1">
                         <label class="control-label"><b>LRNo</b></label>
                     </div>
                     <div class="col-sm-2">
@@ -64,6 +49,7 @@
                                 <th>DocumentNo</th>
                                 <th>ChallanNo</th>
                                 <th>ChallanDate</th>
+                                <th>ArrivalDate</th>
                                 <th>IssueFrom</th>
                                 <th>FromSource</th>
                                 <th>ToDestination</th>
@@ -87,6 +73,7 @@
                                         <td>@Html.DisplayFor(modelItem => docDetail.DocumentNo)</td>
                                         <td>@Html.DisplayFor(modelItem => docDetail.ChallanNo)</td>
                                         <td>@Html.DisplayFor(modelItem => docDetail.ChallanDate)</td>
+                                        <td>@Html.DisplayFor(modelItem => docDetail.ArrivalDate)</td>
                                         <td>@Html.DisplayFor(modelItem => docDetail.IssueFrom)</td>
                                         <td>@Html.DisplayFor(modelItem => docDetail.FromSource)</td>
                                         <td>@Html.DisplayFor(modelItem => docDetail.ToDestination)</td>
@@ -116,49 +103,18 @@
             "responsive": true
         });
 
-         $("#FromDate").val('@ViewBag.FromDate');
-        $("#ToDate").val('@ViewBag.ToDate')
 
-        $("#FromDate").datepicker({
-            changeMonth: true,
-            changeYear: true,
-            dateFormat: 'dd/mm/yy',
-            maxDate: '0',
-            onClose: function (selectedDate, instance) {
-                if (selectedDate != '')
-                {
-                     var fields = selectedDate.split('/');
-                    $("#ToDate").datepicker("option", "minDate", new Date(fields[1]+"-"+fields[0]+"-"+fields[3]));
-                }
-            }
-        });
 
-        $("#ToDate").datepicker({
-            changeMonth: true,
-            changeYear: true,
-            dateFormat: 'dd/mm/yy',
-            maxDate: '0',
-        });
-
-          $("#btnSearch").click(function () {
+        $("#btnSearch").click(function () {
             var isvalid = true;
-            var fromDate = $("#FromDate").val();
-            var toDate = $("#ToDate").val();
+            var LRNo = $("#LRNo").val();
 
-            if (fromDate == "") {
-                $("#ErrFromDate").text("Please enter From date");
+            if (LRNo == "") {
+                $("#ErrLRNo").text("Please enter LRNo");
                 isvalid = false;
             }
             else {
-                $("#ErrFromDate").text("");
-            };
-
-            if (toDate == "") {
-                $("#ErrToDate").text("Please enter To date");
-                isvalid = false;
-            }
-            else {
-                $("#ErrToDate").text("");
+                $("#ErrLRNo").text("");
             };
 
             if (isvalid == false) {

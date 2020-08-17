@@ -9,7 +9,7 @@ namespace TSSReport.Models
     {
         public string DocumentNo { get; set; }
         public string ChallanNo { get; set; }
-        public DateTime ChallanDate { get; set; }
+        public string ChallanDate { get; set; }
         public string IssueFrom { get; set; }
         public string FromSource { get; set; }
         public string ToDestination { get; set; }
@@ -18,10 +18,11 @@ namespace TSSReport.Models
         public string LorryNo { get; set; }
         public string ConsolidatedNo { get; set; }
         public string LRNo { get; set; }
-        public DateTime LRDate { get; set; }
+        public string LRDate { get; set; }
         public int NoOfPkgs { get; set; }
         public string WeightinKgs { get; set; }
         public string Remarks { get; set; }
+        public string ArrivalDate { get; set; }
     }
 
     public class BookingReportModel
@@ -52,7 +53,7 @@ namespace TSSReport.Models
     public class SalesInvoiceReportModel
     {
         public string DocumentNo { get; set; }
-        public DateTime DocumentDate { get; set; }
+        public string DocumentDate { get; set; }
         public string CustomerName { get; set; }
         public string ChallanNo { get; set; }
         public string PaymentStatus { get; set; }
